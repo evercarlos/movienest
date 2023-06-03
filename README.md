@@ -9,7 +9,7 @@ npm i -g @nestjs/cli
 - npm i --save @nestjs/axios axios
 ## Para ejecutar el proyecto
 npm run start:dev
-## Example ######"
+## Example #####
 {
   movies {
     results {

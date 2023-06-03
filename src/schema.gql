@@ -1,0 +1,68 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Movie data"""
+type Movie {
+  """adult"""
+  adult: Boolean!
+
+  """backdrop_path"""
+  backdrop_path: String!
+
+  """id"""
+  id: Float!
+
+  """original_language"""
+  original_language: String!
+
+  """original_title"""
+  original_title: String!
+
+  """overview"""
+  overview: String
+
+  """popularity"""
+  popularity: Float!
+
+  """poster_path"""
+  poster_path: String!
+
+  """release_date"""
+  release_date: String!
+
+  """title"""
+  title: String!
+
+  """video"""
+  video: Boolean!
+
+  """vote_average"""
+  vote_average: Float!
+
+  """vote_count"""
+  vote_count: Float!
+}
+
+"""Response data"""
+type BillboardResponse {
+  """page"""
+  page: Float!
+
+  """movie results"""
+  results: [Movie!]!
+
+  """total_pages"""
+  total_pages: Float!
+
+  """total_results"""
+  total_results: Float!
+}
+
+type Query {
+  """Hola mundo desde grapql"""
+  movies(to: Int): BillboardResponse
+
+  """Hola mundo desde grapql"""
+  hello: String!
+}

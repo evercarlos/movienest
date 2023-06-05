@@ -37,6 +37,7 @@ npm run start:dev
 - Token para acceder a datos peliculas de themoviedb
 - Si el token ha expirado, crear una cuenta en themoviedb y copiar el token de la opción:
   https://developer.themoviedb.org/reference/intro/getting-started
+  
 {
   "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmE5NWY1YzgwM2VjNjFiMjAxZWQ2NmE4NTRlMTUyMSIsInN1YiI6IjVlOTRjMTI3MzliNmMzMDAxYTI0YWUwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.twHmZDdLNTDnkt3XmYFLT9zvsY16Jkx-yhOXZ1db2z4"
 }

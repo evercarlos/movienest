@@ -9,7 +9,7 @@ npm i -g @nestjs/cli
 - npm i --save @nestjs/axios axios
 ## Para ejecutar el proyecto
 npm run start:dev
-## Example #####
+## Example ##
 {
   movies {
     results {
@@ -32,7 +32,7 @@ npm run start:dev
     total_results,
   }
 }
-# headers #
+#### headers ######
 {
   "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmE5NWY1YzgwM2VjNjFiMjAxZWQ2NmE4NTRlMTUyMSIsInN1YiI6IjVlOTRjMTI3MzliNmMzMDAxYTI0YWUwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.twHmZDdLNTDnkt3XmYFLT9zvsY16Jkx-yhOXZ1db2z4"
 }

@@ -1,5 +1,6 @@
 import { join } from 'path';
 import { Module } from '@nestjs/common';
+import { Request } from 'express';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ResolversModule } from './resolvers';
@@ -14,6 +15,11 @@ import { ResolversModule } from './resolvers';
       plugins: [
         ApolloServerPluginLandingPageLocalDefault
       ]*/
+      context: ({ req }: { req: Request }) => {
+        const authorization = req.headers.authorization || null;
+        // Aquí puedes realizar cualquier procesamiento adicional del contexto si es necesario
+        return { authorization };
+      },
     }),
     /**importante para uso de grapql***/
     ResolversModule,

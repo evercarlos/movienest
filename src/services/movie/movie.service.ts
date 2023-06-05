@@ -1,8 +1,9 @@
 import { Injectable } from "@nestjs/common";
 import { HttpService } from "@nestjs/axios";
-import { Observable, catchError, map } from "rxjs";
+import { Observable, map } from "rxjs";
 import { AxiosRequestConfig, AxiosResponse } from "axios";
 import { BillboardResponse, IBillboardResponse } from "src/models/billboard_response";
+import { IRequestHeader } from "src/helpers/http/request-header";
 
 @Injectable()
 export class MovieService {
@@ -12,7 +13,9 @@ export class MovieService {
     /**
      * @Observable Observable<Movie[]: Observa los datos tipo movie, enviados desde servicio(backend)
      **/
-    public findBillboard(to:number):Observable<BillboardResponse> {
+    public findBillboard(headers: IRequestHeader, to:number):Observable<BillboardResponse> {
+
+        const { authorization } = headers;
 
         const config: AxiosRequestConfig = {
             params: {
@@ -20,8 +23,9 @@ export class MovieService {
                 language:'es-ES'
             },
             headers: {
-                Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmE5NWY1YzgwM2VjNjFiMjAxZWQ2NmE4NTRlMTUyMSIsInN1YiI6IjVlOTRjMTI3MzliNmMzMDAxYTI0YWUwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.twHmZDdLNTDnkt3XmYFLT9zvsY16Jkx-yhOXZ1db2z4',
-                Accept: 'application/json'
+                Accept: 'application/json',
+                Authorization: `Bearer ${authorization}`,
+                //Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmE5NWY1YzgwM2VjNjFiMjAxZWQ2NmE4NTRlMTUyMSIsInN1YiI6IjVlOTRjMTI3MzliNmMzMDAxYTI0YWUwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.twHmZDdLNTDnkt3XmYFLT9zvsY16Jkx-yhOXZ1db2z4',
             }
         }
         /**

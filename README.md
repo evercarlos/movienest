@@ -32,3 +32,7 @@ npm run start:dev
     total_results,
   }
 }
+# headers #
+{
+  "authorization": "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2NmE5NWY1YzgwM2VjNjFiMjAxZWQ2NmE4NTRlMTUyMSIsInN1YiI6IjVlOTRjMTI3MzliNmMzMDAxYTI0YWUwYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.twHmZDdLNTDnkt3XmYFLT9zvsY16Jkx-yhOXZ1db2z4"
+}
